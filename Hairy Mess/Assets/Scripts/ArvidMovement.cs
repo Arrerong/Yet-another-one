@@ -41,6 +41,15 @@ public class ArvidMovement : MonoBehaviour
         {
             Jump();
         }
+
+        if (Input.GetMouseButton(1))
+        {
+            speed = 0f;
+        }
+        if (!Input.GetMouseButton(1))
+        {
+            speed = 3f;
+        }
     }
     
     private void Jump()
