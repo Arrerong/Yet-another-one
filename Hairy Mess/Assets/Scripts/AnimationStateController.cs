@@ -6,6 +6,7 @@ public class AnimationStateController : MonoBehaviour
     private int isJoggingHash;
     private int isJumpingHash;
     private int isAimingHash;
+    public int playerIndex;
 
     void Start()
     {
@@ -24,35 +25,38 @@ public class AnimationStateController : MonoBehaviour
         bool forwardPressed = Input.GetKey("w") || Input.GetKey("a") || Input.GetKey("s") || Input.GetKey("d");
         bool jumpPressed = Input.GetKeyDown(KeyCode.Space);
         bool aimPressed = Input.GetMouseButton(1);
-        
-        if (!isJogging && forwardPressed)
-        {
-            animator.SetBool(isJoggingHash, true);
-        }
 
-        else if (isJogging && !forwardPressed)
+        if (TurnManager.GetInstance().IsItPlayerTurn(playerIndex))
         {
-            animator.SetBool(isJoggingHash, false);
-        }
+            if (!isJogging && forwardPressed)
+            {
+                animator.SetBool(isJoggingHash, true);
+            }
 
-        if (!isJumping && jumpPressed)
-        {
-            animator.SetBool(isJumpingHash, true);
-        }
+            if (isJogging && !forwardPressed)
+            {
+                animator.SetBool(isJoggingHash, false);
+            }
 
-        if (isJumping && !jumpPressed)
-        {
-            animator.SetBool(isJumpingHash, false);
-        }
+            if (!isJumping && jumpPressed)
+            {
+                animator.SetBool(isJumpingHash, true);
+            }
 
-        if (!isAiming && aimPressed)
-        {
-            animator.SetBool(isAimingHash, true);
-        }
+            if (isJumping && !jumpPressed)
+            {
+                animator.SetBool(isJumpingHash, false);
+            }
 
-        if (isAiming && !aimPressed)
-        {
-            animator.SetBool(isAimingHash, false);
+            if (!isAiming && aimPressed)
+            {
+                animator.SetBool(isAimingHash, true);
+            }
+
+            if (isAiming && !aimPressed)
+            {
+                animator.SetBool(isAimingHash, false);
+            }
         }
     }
 }
