@@ -67,7 +67,7 @@ public class ArvidMovement : MonoBehaviour
     private bool IsTouchingFloor()
     {
         RaycastHit hit;
-        bool result =  Physics.SphereCast(transform.position, 0.15f, -transform.up, out hit, 1f);
+        bool result =  Physics.SphereCast(transform.position, 0.3f, -transform.up, out hit, 1f);
         return result;
     }
 }
