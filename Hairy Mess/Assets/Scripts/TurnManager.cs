@@ -8,13 +8,18 @@ public class TurnManager : MonoBehaviour
     private int currentPlayerIndex;
 
     public CinemachineFreeLook[] cameras;
-    
+
+    float currentTime = 0f;
+    float startingTime = 15f;
+
     private void Awake()
     {
         if (instance == null)
         {
             instance = this;
             currentPlayerIndex = 1;
+
+            currentTime = startingTime;
         }
     }
     
@@ -70,9 +75,12 @@ public class TurnManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown("t"))
+        currentTime -= 1 * Time.deltaTime;
+
+        if (currentTime <= 0)
         {
             ChangeTurn();
+            currentTime = startingTime;
         }
     }
 }
