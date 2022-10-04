@@ -26,7 +26,7 @@ public class AnimationStateController : MonoBehaviour
         bool jumpPressed = Input.GetKeyDown(KeyCode.Space);
         bool aimPressed = Input.GetMouseButton(1);
 
-        if (TurnManager.GetInstance().IsItPlayerTurn(playerIndex))
+        if (TurnManager.GetInstance().IsItPlayerTurn(playerIndex -1))
         {
             if (!isJogging && forwardPressed)
             {

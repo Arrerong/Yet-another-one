@@ -9,6 +9,7 @@ public class Gun : MonoBehaviour
         if (Input.GetButtonDown("Fire1"))
         {
             Shoot();
+            Debug.Log("vaefse");
         }
     }
 
@@ -23,7 +24,7 @@ public class Gun : MonoBehaviour
             }
             
             if (hit.collider.tag == "Player")
-            {           
+            {
                 Destroy (hit.collider.gameObject);
             }
         }

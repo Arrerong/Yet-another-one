@@ -5,16 +5,19 @@ public class ArvidMovement : MonoBehaviour
     public Rigidbody controller;
     public Transform cam;
     public int playerIndex;
-    
+
     public float speed = 3f;
     public float originalSpeed;
 
     public float turnSmoothTime = 2f;
     private float turnSmoothVelocity;
 
+    public GameObject camera;
+
     private void Start()
     {
         Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
 
         originalSpeed = speed;
     }
@@ -23,6 +26,7 @@ public class ArvidMovement : MonoBehaviour
     {
         if (TurnManager.GetInstance().IsItPlayerTurn(playerIndex))
         {
+            camera.SetActive(true);
             if (Input.GetKeyDown(KeyCode.Escape))
             {
                 UnityEditor.EditorWindow.focusedWindow.maximized = !UnityEditor.EditorWindow.focusedWindow.maximized;
@@ -56,6 +60,10 @@ public class ArvidMovement : MonoBehaviour
             {
                 speed = originalSpeed;
             }
+        }
+        else
+        {
+            camera.SetActive(false);
         }
     }
     

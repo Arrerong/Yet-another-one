@@ -1,5 +1,6 @@
-using Cinemachine;
+using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class TurnManager : MonoBehaviour
 {
@@ -7,27 +8,29 @@ public class TurnManager : MonoBehaviour
     
     private int currentPlayerIndex;
 
-    public CinemachineFreeLook[] cameras;
+    public List<ArvidMovement> players;
 
     float currentTime = 0f;
     float startingTime = 15f;
+
+    public TMP_Text winText;
 
     private void Awake()
     {
         if (instance == null)
         {
             instance = this;
-            currentPlayerIndex = 1;
+            currentPlayerIndex = 0;
 
             currentTime = startingTime;
         }
     }
-    
+
     public bool IsItPlayerTurn(int index)
     {
         return index == currentPlayerIndex;
     }
-    
+
     public static TurnManager GetInstance()
     {
         return instance;
@@ -35,42 +38,47 @@ public class TurnManager : MonoBehaviour
     
     public void ChangeTurn()
     {
-        if (currentPlayerIndex == 1)
+        for (int i = 0; i < players.Count; i++)
         {
-            currentPlayerIndex = 2;
-            cameras[0].gameObject.SetActive(false);
-            cameras[1].gameObject.SetActive(true);
+            currentPlayerIndex++;
+            if (currentPlayerIndex >= players.Count)
+            {
+                currentPlayerIndex = 0;
+            }
+            if (players[currentPlayerIndex] != null)
+            {
+                return;
+            }
         }
-        else if (currentPlayerIndex == 2)
+    }
+
+    private int checkWinner()
+    {
+        bool baldies = false;
+        bool haries = false;
+        for (int i = 0; i < players.Count; i++)
         {
-            currentPlayerIndex = 3;
-            cameras[1].gameObject.SetActive(false);
-            cameras[2].gameObject.SetActive(true);
+            if (players[i] != null)
+            {
+                if (i % 2 == 0)
+                {
+                    haries = true;
+                }
+                else
+                {
+                    baldies = true;
+                }
+            }
         }
-        else if (currentPlayerIndex == 3)
+        if (baldies && haries)
         {
-            currentPlayerIndex = 4;
-            cameras[2].gameObject.SetActive(false);
-            cameras[3].gameObject.SetActive(true);
+            return 0;
         }
-        else if (currentPlayerIndex == 4)
+        if (baldies)
         {
-            currentPlayerIndex = 5;
-            cameras[3].gameObject.SetActive(false);
-            cameras[4].gameObject.SetActive(true);
+            return 2;
         }
-        else if (currentPlayerIndex == 5)
-        {
-            currentPlayerIndex = 6;
-            cameras[4].gameObject.SetActive(false);
-            cameras[5].gameObject.SetActive(true);
-        }
-        else if (currentPlayerIndex == 6)
-        {
-            currentPlayerIndex = 1;
-            cameras[5].gameObject.SetActive(false);
-            cameras[0].gameObject.SetActive(true);
-        }
+        return 1;
     }
 
     private void Update()
@@ -80,6 +88,10 @@ public class TurnManager : MonoBehaviour
         if (currentTime <= 0)
         {
             ChangeTurn();
+            if (checkWinner() != 0)
+            {
+                winText.text = checkWinner() == 1 ? "Hairy Fucks win!" : "Bald Angels win!";
+            }
             currentTime = startingTime;
         }
     }
