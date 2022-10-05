@@ -22,7 +22,7 @@ public class Gun : MonoBehaviour
                 Debug.Log(hit.transform.name);
             }
             
-            if (hit.collider.tag == "Player")
+            if (hit.transform.CompareTag("Player"))
             {
                 Destroy (hit.collider.gameObject);
             }
