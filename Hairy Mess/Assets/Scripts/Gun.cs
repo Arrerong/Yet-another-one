@@ -24,7 +24,7 @@ public class Gun : MonoBehaviour
             
             if (hit.transform.CompareTag("Player"))
             {
-                Destroy (hit.collider.gameObject);
+                hit.transform.GetComponent<Health>().TakeDamage(1);
             }
         }
     }

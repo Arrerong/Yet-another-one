@@ -371,6 +371,7 @@ GameObject:
   - component: {fileID: 118320988}
   - component: {fileID: 118320987}
   - component: {fileID: 118320986}
+  - component: {fileID: 118320989}
   m_Layer: 0
   m_Name: Bald 3 Center
   m_TagString: Player
@@ -443,6 +444,20 @@ CapsuleCollider:
   m_Height: 1.8978176
   m_Direction: 1
   m_Center: {x: 0.008641422, y: -0.1983912, z: -0.008030444}
+--- !u!114 &118320989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 118320982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0ddce74bcb75e34e9cf63471d27292f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 1
+  currentHealth: 0
 --- !u!1 &136386465
 GameObject:
   m_ObjectHideFlags: 3
@@ -1676,7 +1691,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 423880525}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 42.484764, y: 5.6743174, z: 43.528423}
+  m_LocalPosition: {x: 44.83076, y: 4.9723177, z: 44.809425}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2043,6 +2058,7 @@ GameObject:
   - component: {fileID: 522838075}
   - component: {fileID: 522838074}
   - component: {fileID: 522838073}
+  - component: {fileID: 522838076}
   m_Layer: 0
   m_Name: Hairy 2 Center
   m_TagString: Player
@@ -2115,6 +2131,20 @@ MonoBehaviour:
   originalSpeed: 0
   turnSmoothTime: 0.1
   camera: {fileID: 1631121176}
+--- !u!114 &522838076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 522838069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0ddce74bcb75e34e9cf63471d27292f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 1
+  currentHealth: 0
 --- !u!1 &547127120
 GameObject:
   m_ObjectHideFlags: 3
@@ -4047,6 +4077,7 @@ GameObject:
   - component: {fileID: 962515279}
   - component: {fileID: 962515278}
   - component: {fileID: 962515277}
+  - component: {fileID: 962515280}
   m_Layer: 0
   m_Name: Bald 2 Center
   m_TagString: Player
@@ -4119,6 +4150,20 @@ CapsuleCollider:
   m_Height: 1.8978176
   m_Direction: 1
   m_Center: {x: 0.008641422, y: -0.1983912, z: -0.008030444}
+--- !u!114 &962515280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 962515273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0ddce74bcb75e34e9cf63471d27292f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 1
+  currentHealth: 0
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -4196,8 +4241,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.060687494, y: -0.8170208, z: 0.08749554, w: 0.56669104}
-  m_LocalPosition: {x: 43.477676, y: 7.152, z: 43.445576}
+  m_LocalRotation: {x: 0.060687486, y: -0.8170208, z: 0.08749553, w: 0.56669104}
+  m_LocalPosition: {x: 45.823673, y: 6.4500003, z: 44.726578}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4879,7 +4924,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1181936018}
-  m_LocalRotation: {x: 0.060687482, y: -0.8170207, z: 0.087495536, w: 0.56669104}
+  m_LocalRotation: {x: 0.06068748, y: -0.8170207, z: 0.08749553, w: 0.56669104}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -5168,7 +5213,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1212580771}
-  m_LocalRotation: {x: 0.060687482, y: -0.8170207, z: 0.087495536, w: 0.56669104}
+  m_LocalRotation: {x: 0.06068748, y: -0.8170207, z: 0.08749553, w: 0.56669104}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -5385,6 +5430,7 @@ GameObject:
   - component: {fileID: 1293849951}
   - component: {fileID: 1293849950}
   - component: {fileID: 1293849952}
+  - component: {fileID: 1293849953}
   m_Layer: 0
   m_Name: Hairy 1 Center
   m_TagString: Player
@@ -5400,7 +5446,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1293849948}
   m_LocalRotation: {x: -0, y: -0.8599007, z: -0, w: 0.5104613}
-  m_LocalPosition: {x: 40.844, y: 6.502, z: 42.009}
+  m_LocalPosition: {x: 43.19, y: 5.8, z: 43.29}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5457,6 +5503,20 @@ CapsuleCollider:
   m_Height: 1.8978176
   m_Direction: 1
   m_Center: {x: 0.008641422, y: -0.1983912, z: -0.008030444}
+--- !u!114 &1293849953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1293849948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0ddce74bcb75e34e9cf63471d27292f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 1
+  currentHealth: 0
 --- !u!1 &1294685968 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 69426997a2b99482d96eb88d02d07ae6, type: 3}
@@ -7224,6 +7284,7 @@ GameObject:
   - component: {fileID: 1717368419}
   - component: {fileID: 1717368418}
   - component: {fileID: 1717368417}
+  - component: {fileID: 1717368420}
   m_Layer: 0
   m_Name: Bald 1 Center
   m_TagString: Player
@@ -7296,6 +7357,20 @@ CapsuleCollider:
   m_Height: 1.8978176
   m_Direction: 1
   m_Center: {x: 0.008641422, y: -0.1983912, z: -0.008030444}
+--- !u!114 &1717368420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1717368413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0ddce74bcb75e34e9cf63471d27292f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 1
+  currentHealth: 0
 --- !u!1 &1731983654
 GameObject:
   m_ObjectHideFlags: 0
@@ -8416,6 +8491,7 @@ GameObject:
   - component: {fileID: 1932678880}
   - component: {fileID: 1932678879}
   - component: {fileID: 1932678878}
+  - component: {fileID: 1932678881}
   m_Layer: 0
   m_Name: Hairy 3 Center
   m_TagString: Player
@@ -8488,6 +8564,20 @@ CapsuleCollider:
   m_Height: 1.8978176
   m_Direction: 1
   m_Center: {x: 0.008641422, y: -0.1983912, z: -0.008030444}
+--- !u!114 &1932678881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1932678874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0ddce74bcb75e34e9cf63471d27292f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 1
+  currentHealth: 0
 --- !u!1 &1933935186 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: a257e11f2602240e48efba7b6d63aeda, type: 3}
